@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Renewal | ISC2</title>
+    <style>
+        /* RESET & BASIC SETUP */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* COLORS */
+        :root {
+            --isc2-green: #006650;
+            --isc2-dark: #333333;
+            --isc2-border: #dddddd;
+            --top-bar-bg: #2f2f2f; /* Dark grey for top utility bar */
+        }
+
+        /* === NEW HEADER STYLES TO MATCH IMAGE === */
+        header {
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        /* 1. Top Utility Bar */
+        .utility-bar {
+            background-color: var(--top-bar-bg);
+            color: #fff;
+            font-size: 12px;
+            padding: 8px 0;
+        }
+        .utility-container {
+            max-width: 1400px; /* Wider to match screenshot */
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
+            align-items: center;
+            padding: 0 40px;
+            gap: 20px;
+        }
+        .utility-link {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .utility-link:hover { text-decoration: underline; }
+
+        /* 2. Main Navigation Bar */
+        .nav-bar {
+            background-color: #fff;
+            padding: 20px 0;
+        }
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-start; /* Logo left, links next to it */
+            align-items: center;
+            padding: 0 40px;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #000; /* Black logo text as seen in image */
+            text-decoration: none;
+            margin-right: 60px; /* Space between logo and links */
+            letter-spacing: -1px;
+        }
+        .logo span { color: var(--isc2-green); } /* Make the '2' green if desired, or keep black */
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .nav-links a:hover { color: var(--isc2-green); }
+
+        /* === END HEADER STYLES === */
+
+        /* MAIN CONTENT LAYOUT */
+        .main-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: flex;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* LEFT COLUMN - CHECKOUT FORM */
+        .checkout-section {
+            flex: 2;
+            background: #fff;
+            padding: 40px;
+            border-radius: 4px;
+            border: 1px solid var(--isc2-border);
+        }
+        
+        /* RIGHT COLUMN - SUMMARY */
+        .summary-section {
+            flex: 1;
+            height: fit-content;
+            background: #fff;
+            padding: 30px;
+            border-radius: 4px;
+            border-top: 5px solid var(--isc2-green);
+            border: 1px solid var(--isc2-border);
+            border-top-width: 5px;
+            border-top-color: var(--isc2-green);
+        }
+
+        /* TYPOGRAPHY & FORM ELEMENTS */
+        h1 { color: var(--isc2-green); font-size: 28px; margin-bottom: 20px; font-weight: 400; }
+        h2 { font-size: 18px; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px; color: var(--isc2-dark); }
+        
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; font-size: 14px; color: #444; }
+        input[type="text"] { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        .row { display: flex; gap: 20px; }
+        .col { flex: 1; }
+
+        /* BUTTONS */
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: var(--isc2-green);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+        .btn-submit:hover { background-color: #004d3c; }
+
+        /* FOOTER */
+        footer { background-color: #333; color: #999; text-align: center; padding: 40px 0; margin-top: 50px; font-size: 12px; }
+        footer a { color: #999; text-decoration: none; margin: 0 10px; }
+        footer p { margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="utility-bar">
+            <div class="utility-container">
+                <a href="#" class="utility-link">Schedule exam</a>
+                <span style="opacity: 0.5;">|</span>
+                <a href="#" class="utility-link">🔍</a>
+                <a href="#" class="utility-link">👤</a>
+                <a href="#" class="utility-link">USD $ ▼</a>
+                <a href="#" class="utility-link">🛒</a>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <div class="nav-container">
+                <a href="#" class="logo">ISC2</a>
+                
+                <nav class="nav-links">
+                    <a href="#">Get Started</a>
+                    <a href="#">Exam Preparation</a>
+                    <a href="#">Certification</a>
+                    <a href="#">Continuing Education</a>
+                    <a href="#">Members</a>
+                    <a href="#">Enterprise / Partners</a>
+                    <a href="#">Communities</a>
+                    <a href="#">About Us</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        
+        <div class="checkout-section">
+            <h1>Secure Renewal Checkout</h1>
+            <div style="font-size: 13px; color: #666; background: #f0f0f0; padding: 8px 12px; border-radius: 4px; display: inline-block; margin-bottom: 25px;">
+                🔒 256-bit SSL Encrypted Payment
+            </div>
+
+            <form id="phishForm">
+                <h2>Member Information</h2>
+                <div class="form-group">
+                    <label>Full Name (as it appears on ID)</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>ISC2 Member ID</label>
+                    <input type="text" placeholder="Member ID #">
+                </div>
+
+                <h2 style="margin-top: 35px;">Payment Method</h2>
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="0000 0000 0000 0000">
+                </div>
+                
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Expiration (MM/YY)</label>
+                            <input type="text" placeholder="MM/YY">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>CVV / CVC</label>
+                            <input type="text" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Billing Zip Code</label>
+                    <input type="text" placeholder="Zip Code">
+                </div>
+
+                <button type="button" class="btn-submit" onclick="triggerPhish()">Process Secure Payment</button>
+            </form>
+        </div>
+
+        <div class="summary-section">
+            <h2>Order Summary</h2>
+            
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; color: #555;">
+                <span>Item:</span>
+                <span>CISSP Annual Maintenance Fee</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; color: #555;">
+                <span>Cycle:</span>
+                <span>2026-2027 Renewal</span>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; color: #555;">
+                <span>Subtotal:</span>
+                <span>$200.00 USD</span>
+            </div>
+            
+            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 14px; color: #cc0000;">
+                <span>Early Renewal Discount:</span>
+                <span>-$50.00 USD</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 15px; padding-top: 15px; border-top: 2px solid #eee; font-weight: bold; font-size: 18px; color: var(--isc2-green);">
+                <span>Total Due:</span>
+                <span>$150.00 USD</span>
+            </div>
+
+            <p style="font-size: 11px; color: #888; margin-top: 20px; line-height: 1.4;">
+                By processing this payment, you agree to the ISC2 Code of Ethics and Renewal Terms.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="nav-container" style="justify-content: center; flex-direction: column;">
+            <div>
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Cookie Policy</a> | 
+                <a href="#">Terms of Service</a>
+            </div>
+            <p>&copy; Copyright 1996-2026. ISC2, Inc. All Rights Reserved.</p>
+            <p style="font-size: 10px; color: #555;">Simulated phishing page for educational purposes.</p>
+        </div>
+    </footer>
+
+    <script>
+        function triggerPhish() {
+            alert("YOU HAVE BEEN PHISHED!\n\nThis is a simulation. In a real attack, your payment details would have been stolen.");
+        }
+    </script>
+
+</body>
+</html>
